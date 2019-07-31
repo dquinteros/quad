@@ -1,43 +1,94 @@
-/*
- * @NOTE: Prepend a `~` to css file paths that are in your node_modules
- *        See https://github.com/webpack-contrib/sass-loader#imports
- */
-@import "~@fortawesome/fontawesome-free/css/all.css";
+/* @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700&display=swap'); */
 
 body {
-  position: relative;
-  color: white;
-  height: 100vh;
-  background-color: #232c39;
-  background-image: linear-gradient(45deg, rgba(0, 216, 255, 0.5) 10%, rgba(0, 1, 127, 0.7));
-  font-family: Arial, Helvetica, Helvetica Neue, serif;
-  overflow-y: hidden;
-}
-
-h2 {
   margin: 0;
-  font-size: 2.25rem;
-  font-weight: bold;
-  letter-spacing: -0.025em;
-  color: #fff;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
-p {
-  font-size: 24px;
+.logo {
+  position: absolute;
+  z-index: 20;
+  top: 24px;
+  right: 24px;
 }
 
-li {
-  list-style: none;
+.pizza {
+  width: 45%;
+  height: auto;
+  position: absolute;
+  bottom: -5%;
+  right: auto;
+  left: -5%;
+  z-index: 10;
 }
 
-a {
+.pizza img {
+  width: 100%;
+}
+
+.pizza_big {
+  width: 90%;
+  height: auto;
+  position: absolute;
+  top: 10%;
+  right: auto;
+  left: -5%;
+  z-index: 10;
+  max-width: 1000px;
+}
+
+.pizza_big img {
+  width: 100%;
+}
+
+.btn_content {
+  position: absolute;
+  bottom: 44px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 20;
+  padding: 1em;
+}
+
+.btn {
+  padding: 1em 2em;
+  font-size: 32px;
+  background-color: #d9000d;
   color: white;
-  opacity: 0.75;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 6px 1px rgba(20, 20, 20, 0.25);
   text-decoration: none;
 }
 
-a:hover {
-  opacity: 1;
-  text-decoration: none;
-  cursor: pointer;
+.btn:active {
+  filter: brightness(80%);
+  border: none;
+}
+
+#scanner {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#preview {
+  display: inline;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: url('./assets/img/bg.jpg');
+  background-color: #d9000d;
+  position: relative;
+  overflow: hidden;
 }
