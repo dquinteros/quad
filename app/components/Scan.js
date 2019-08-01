@@ -55,7 +55,8 @@ export default class Scan extends Component<Props> {
         <video id="preview"></video>
       </div>
       <div className="btn_content">
-      <Link className="btn" to={routes.HOME}>VOLVER</Link>
+      <Link className="btn__secondary" to={routes.HOME}>VOLVER</Link>
+      <Link className="btn" to={routes.WIN}>ESCANEAR!</Link>
       </div>
     </div>;
 

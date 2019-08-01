@@ -1,0 +1,8 @@
+premio0Proxima:999997
+premio1Bolsa:0
+premio2Papertoys:2
+premio3Pizza:0
+premio4Quadpizza:3
+premio5Bateria:1
+premio6ParlanteRojo:0
+premio7ParlanteMadera:1
