@@ -29,6 +29,8 @@ const imgs = {
   premio7ParlanteMadera: premio7ParlanteMadera,
 }
 
+const filePath = '/Users/dquinteros/code/quad-pizza/temp.txt';
+
 export default class Home extends Component<Props> {
   props: Props;
   constructor(){
@@ -39,9 +41,7 @@ export default class Home extends Component<Props> {
   }
 
   componentDidMount(){
-    console.log('here');
-    // /Users/dquinteros/code/quad-pizza/temp.txt
-    fs.readFile("temp.txt", "utf-8", (err, buf) => {
+    fs.readFile(filePath, "utf-8", (err, buf) => {
       const stockArray = buf.toString().split("\n").map(e => e.split(':')).splice(0,8).map(e => [e[0], parseInt(e[1],10)])
       console.log(stockArray);
       this.setState({stockArray})
@@ -73,7 +73,7 @@ export default class Home extends Component<Props> {
       oldStock[selection.index][1] = oldStock[selection.index][1]-1
       const newStock = oldStock.map(e => `${e[0]}:${e[1]}`).join('\n')
       console.log('newStock', newStock)
-      fs.writeFile("temp.txt", newStock, (err) => {
+      fs.writeFile(filePath, newStock, (err) => {
       if (err) console.log(err);
         console.log("Successfully Written to File.");
       });
